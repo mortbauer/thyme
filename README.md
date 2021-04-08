@@ -87,6 +87,10 @@ You can help out with development using the following steps.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## Run
+```
+docker run --rm -it -v $PWD/.env:/.env -v $PWD/src:/src -p 3000:3000 thyme
+```
 ## License
 
 MIT

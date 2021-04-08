@@ -55,14 +55,14 @@ class Subscribe extends Component<SubscribeProps, SubscribeState> {
   }
 
   componentDidMount() {
-    const stripeJs = document.createElement('script');
-    stripeJs.src = 'https://js.stripe.com/v3/';
-    stripeJs.async = true;
-    stripeJs.onload = () => this.setState({
-      stripe: window.Stripe(process.env.REACT_APP_STRIPE_KEY),
-    });
+   /* const stripeJs = document.createElement('script');*/
+    //stripeJs.src = 'https://js.stripe.com/v3/';
+    //stripeJs.async = true;
+    //stripeJs.onload = () => this.setState({
+      //stripe: window.Stripe(process.env.REACT_APP_STRIPE_KEY),
+    //});
 
-    if (document.body) document.body.appendChild(stripeJs);
+    /*if (document.body) document.body.appendChild(stripeJs);*/
 
     trackPageview('Premium / Subscribe');
   }
