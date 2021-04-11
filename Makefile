@@ -9,6 +9,6 @@ publish:
 	docker push ${IMAGE_NAME}
 
 run:
-	docker run --rm -it -v $PWD/.env:/.env -v $PWD/src:/src -p 3000:3000 ${IMAGE_NAME}
+	docker run --rm -it -e REACT_APP_API_ROOT=http://localhost:5000 -e PUBLIC_URL=http://localhost:4000 -v ${PWD}/entrypoint.sh:/app/entrypoint.sh -p 4000:80 --name thyme-test ${IMAGE_NAME}
 
 #  vim: set noexpandtab ts=2 sw=2 tw=0 :

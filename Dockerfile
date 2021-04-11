@@ -14,9 +14,16 @@ COPY package.json package.json
 RUN npm install --production --silent
 RUN apk del .build-deps
 
-ENV REACT_APP_API_ROOT "__API_URL__"
-ENV REACT_APP_TAB_URL "__PUBLIC_URL__"
 COPY . .
+ENV REACT_APP_API_ROOT "__API_URL__"
+ENV PUBLIC_URL "__PUBLIC_URL__"
+COPY jsconfig.json .babelrc .eslintrc.js .flowconfig ./
+RUN mkdir scripts src extension public flow-typed
+COPY src src/
+COPY flow-typed flow-typed/
+COPY extension extension/
+COPY scripts scripts/
+COPY public public/
 RUN npm run build
 
 FROM nginx:stable-alpine as production-stage
