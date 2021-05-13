@@ -66,7 +66,7 @@ function TimeSheet(props: TimeSheetProps) {
       enabledProjects: getEnableProjects(state),
       enabledEndDate: getEnableEndDate(state),
     };
-  }, [now]);
+  });
 
   const dispatch = useDispatch();
   const changeEntriesPage = useActions(changePage);

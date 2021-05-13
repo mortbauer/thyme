@@ -108,15 +108,15 @@ function Login({ goToRegister }: LoginProps) {
           </section>
 
           <section className="Account__Sub-Bar">
-           Do not have an account?
+            Do not have an account?
 
-           <Button
-             labelPosition="right"
-             basic
-             color="blue"
-             onClick={goToRegister}
-             content="Register"
-           />
+            <Button
+              labelPosition="right"
+              basic
+              color="blue"
+              onClick={goToRegister}
+              content="Register"
+            />
           </section>
         </Form>
       )}

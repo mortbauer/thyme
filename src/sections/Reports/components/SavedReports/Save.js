@@ -82,7 +82,6 @@ class Save extends Component<SaveProps, SaveState> {
   closeModal = () => {
     const { onClose } = this.props;
 
-
     this.setState({
       name: '',
       error: false,

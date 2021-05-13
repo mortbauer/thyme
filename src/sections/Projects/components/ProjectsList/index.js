@@ -49,8 +49,7 @@ function ProjectsListWrapper(props: ProjectsListWrapperProps) {
               Parent
             </Table.HeaderCell>
             {renderComponent('projects.tableheader.parent', props)}
-            <Table.HeaderCell width={1}>
-            </Table.HeaderCell>
+            <Table.HeaderCell width={1} />
           </Table.Row>
         </Table.Header>
       )}

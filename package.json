@@ -60,6 +60,7 @@
         "redux-observable": "^1.1.0",
         "reselect": "^4.0.0",
         "rxjs": "^6.5.2",
+        "scheduler":"^0.14.0",
         "semantic-ui-css": "^2.4.1",
         "semantic-ui-react": "^0.86.0",
         "semver": "^6.3.0",

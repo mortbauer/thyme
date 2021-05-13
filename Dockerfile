@@ -11,12 +11,10 @@ FROM node:lts-alpine as base
 WORKDIR /app
 RUN apk add --no-cache --virtual .build-deps build-base alpine-sdk python
 COPY package.json package.json
-RUN npm install --production --silent
+RUN npm install # --production --silent
 RUN apk del .build-deps
 
-COPY . .
-ENV REACT_APP_API_ROOT "__API_URL__"
-ENV PUBLIC_URL "__PUBLIC_URL__"
+#COPY . .
 COPY jsconfig.json .babelrc .eslintrc.js .flowconfig ./
 RUN mkdir scripts src extension public flow-typed
 COPY src src/
@@ -24,6 +22,8 @@ COPY flow-typed flow-typed/
 COPY extension extension/
 COPY scripts scripts/
 COPY public public/
+COPY .env.production ./
+ENV REACT_APP_VERSION=$npm_package_version
 RUN npm run build
 
 FROM nginx:stable-alpine as production-stage
