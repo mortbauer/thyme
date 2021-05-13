@@ -45,7 +45,7 @@ onExtensionConnected(() => changeState(store.getState()));
 ReactDOM.render(
   <Provider store={store}>
     <RegisterProvider>
-      <BrowserRouter basename={process.env.PUBLIC_URL || ''}>
+      <BrowserRouter>
         <ErrorBoundary>
           <App>
             <Routes />

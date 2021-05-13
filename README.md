@@ -1,4 +1,4 @@
-# ![Thyme](/public/icons/favicon-32x32.png) Thyme
+s ![Thyme](/public/icons/favicon-32x32.png) Thyme
 
 A little web app which allows you to log time data.
 
